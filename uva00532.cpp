@@ -14,23 +14,29 @@ int main()
 		for(i=0;i<row;i++){
 			for(j=0;j<col;j++){
 				cin>>map[k][i][j];
-				visited[k][i][j] = -1;
+				if(map[k][i][j] == 'S'){
+					visited[k][i][j]=0;
+					que.push(1); que.push(i); que.push(j);
+				}
+				else if(map[k][i][j] == '#') visited[k][i][j]=0;
+				else visited[k][i][j] = -1;
 			}
 		}
 	}
 	
-	
 
-	cout<<floor<<" "<<row<<" "<<col<<endl;
-     for(k=0;k<floor;k++){
-         for(i=0;i<row;i++){
-             for(j=0;j<col;j++){
-                 cout<<map[k][i][j];
-             }
-			 cout<<endl;
-         }
-		 cout<<endl;
-     }
+    int x,y,z;
+	while(!que.empty()){
+		y = que.front();  que.pop();
+		x = que.front();  que.pop();
+		z = que.front();  que.pop();
+		if(z-1 >= 0){
+			if
+
+
+
+
+ 
 
 
 	return 0;
